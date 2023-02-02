@@ -1,0 +1,88 @@
+header {
+  height: 100vh;
+  /* padding-top: 7rem; */
+  overflow: hidden;
+}
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+/* =======CTA============ */
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* ==================Header SOCIALS ====================== */
+
+.header_socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 6rem;
+  bottom: 3rem;
+}
+.header_socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* ==========================ME================== */
+
+.me {
+  background: var(--color-primary);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  /* left: calc(50%-11rem); */
+  margin-top: 17rem;
+  border-radius: 10rem 10rem 0 0;
+  overflow: hidden;
+  padding: 0rem 0rem 0rem 0rem;
+  /* position: fixed; */
+  left: 50%;
+  /* top: 68%; */
+  transform: translate(-50%, -50%);
+  /* transform: translateX(96%); */
+}
+.scroll_down {
+  position: absolute;
+  right: -0.5rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+}
+/* ============== Media Queries for Medium Device==================== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+/* ============== Media Queries for Smalll Device==================== */
+@media screen and (max-width: 600px) {
+  section {
+    margin-top: 14rem;
+  }
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  .header_socials {
+    display: none;
+  }
+
+  .scroll_down {
+    display: none;
+  }
+}
